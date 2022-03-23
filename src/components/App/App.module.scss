@@ -1,0 +1,10 @@
+.title {
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 25px;
+	color: #2c2c2c;
+    text-align: center;
+    @media(min-width: 1000px){
+        text-align: start;
+    }
+}

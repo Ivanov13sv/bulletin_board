@@ -1,0 +1,65 @@
+.containerSlider {
+	width: 224px;
+	height: 260px;
+	overflow: hidden;
+	position: relative;
+
+	.slides {
+		width: 100%;
+
+		.slide {
+			transition: all 0.3s ease;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 100%;
+			opacity: 0;
+			img {
+				width: 100%;
+				height: 100%;
+			}
+			&.active {
+				opacity: 1;
+			}
+		}
+	}
+	.navigation {
+		position: absolute;
+		bottom: 16px;
+		display: flex;
+		gap: 0 12px;
+
+		left: 50%;
+		transform: translateX(-50%);
+		.btn {
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background: #c4c4c4;
+			border: none;
+			border: 1px solid #5a5a5a;
+			cursor: pointer;
+			transition: all 0.4s ease;
+			user-select: none;
+			-webkit-touch-callout: none;
+			-webkit-tap-highlight-color: transparent;
+
+			&.active {
+				background: #00a0ab;
+				transform: scale(1.2);
+			}
+		}
+
+		@media (min-width: 752px) {
+			gap: 0 8px;
+			.btn {
+				width: 8px;
+				height: 8px;
+				&:hover {
+					opacity: 1;
+					transform: scale(1.3);
+				}
+			}
+		}
+	}
+}

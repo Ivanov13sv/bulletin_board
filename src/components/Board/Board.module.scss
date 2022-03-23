@@ -1,0 +1,35 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    .board {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(224px, 1fr));
+        gap: 1.5rem;
+        justify-items: center;
+        margin-bottom: 12px;
+    }
+    margin-bottom: 2rem;
+}
+
+.showMore {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+    height: 24px;
+    border: none;
+    background-color: transparent;
+	color: #00a0ab;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+    cursor: pointer;
+    svg{
+        margin-left: 5px;
+        margin-top: 3px;
+    }
+
+    @media (max-width: 1000px) {
+        align-self: center;
+    }
+}

@@ -1,0 +1,21 @@
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.spiner{
+    width: 100px;
+    height: 100px;
+    border: 10px solid rgba(2, 151, 151, 0.603);
+    border-left: 10px solid teal;
+    border-radius: 50%;
+    animation: rotate 1.5s infinite;
+    position: absolute;
+    top: 30%;
+    left: calc(50% - 50px) ;
+}
