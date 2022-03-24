@@ -5,15 +5,17 @@ import { ReactComponent as Like } from '../../img/icons/like.svg';
 import { ReactComponent as Compare } from '../../img/icons/compare.svg';
 import { Slider } from '../Slider/Slider';
 
-export const Card = ({ card, seenToggle, images }) => {
-	const { id, oldPrice, price, title, seen, locality = '', date } = card;
+export const Card = ({ card, seenToggle, images, isViewed }) => {
+
+	const { id, oldPrice, price, title, locality = '', date } = card;
+
 
 	const shortLocation =
 		locality.length > 15 ? `${locality.slice(0, 15)}...` : locality;
 		
 	const parseDate = new Date(date).toLocaleDateString('en-CA');
 
-	const viewClasses = seen
+	const viewClasses = isViewed
 		? `${styles.card} ${styles.card__active}`
 		: styles.card;
 
