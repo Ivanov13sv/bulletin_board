@@ -9,25 +9,26 @@ export const Slider = ({ images = [] }) => {
 		<div className={styles.containerSlider}>
 			<div className={styles.slides}>
 				{images.map((item, i) => (
-					<div key={`${item}-${i}`}
+					<div
+						key={`${item}-${i}`}
 						className={
 							current === i + 1
 								? `${styles.slide} ${styles.active}`
 								: `${styles.slide}`
 						}
 					>
-						<LoadableImage src={item} alt={item}/>
+						<LoadableImage src={item} alt={item} />
 					</div>
 				))}
 			</div>
 			<div className={styles.navigation}>
 				{images.map((item, i) => (
 					<span
-            key={i}
+						key={i}
 						onClick={(e) => {
-              e.stopPropagation()
-              setCurrent(i + 1)
-            }}
+							e.stopPropagation();
+							setCurrent(i + 1);
+						}}
 						className={
 							current === i + 1
 								? `${styles.btn} ${styles.active}`

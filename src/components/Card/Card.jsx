@@ -8,8 +8,7 @@ import { Slider } from '../Slider/Slider';
 export const Card = ({ card, seenToggle, images, isViewed }) => {
 
 	const { id, oldPrice, price, title, locality = '', date } = card;
-
-
+	
 	const shortLocation =
 		locality.length > 15 ? `${locality.slice(0, 15)}...` : locality;
 		
